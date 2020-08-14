@@ -6,7 +6,6 @@ import 'package:vector_math/vector_math_64.dart';
 
 void main() => runApp(MaterialApp(home: MyApp()));
 
-
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
@@ -25,13 +24,13 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: const Text('Hello Earth!')),
-    body: Container(
-      child: ARKitSceneView(
-        onARKitViewCreated: onARKitViewCreated,
-      ),
-    ),
-  );
+        appBar: AppBar(title: const Text('Hello Earth!')),
+        body: Container(
+          child: ARKitSceneView(
+            onARKitViewCreated: onARKitViewCreated,
+          ),
+        ),
+      );
 
   void onARKitViewCreated(ARKitController arkitController) {
     this.arkitController = arkitController;
